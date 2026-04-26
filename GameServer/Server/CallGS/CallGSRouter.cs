@@ -27,6 +27,7 @@ public static class CallGSRouter
             try
             {
                 await handler.Handle(connection, req.Param, seqNo);
+                await connection.Player!.OnHeartBeat();
             }
             catch (Exception e)
             {
