@@ -44,32 +44,34 @@ dotnet build
 
 ## Feature List
 
-- `[x]` Login and basic account entry
-- `[x]` Player data loading
-- `[x]` Inventory loading
-- `[x]` Character loading
-- `[x]` Skin loading
-- `[x]` Weapon loading
-- `[x]` Lobby display character switching
-- `[x]` Character skin switching
-- `[x]` Character skin form switching
-- `[x]` Weapon replacement
-- `[x]` Weapon upgrade
-- `[x]` Player rename
-- `[x]` Basic saving of currently supported lobby state
-- `[✓]` Main chapter stage entry and related flow
-- `[✓]` Daily stage entry and related flow
-- `[✓]` Basic player setting synchronization
-- `[✓]` Basic profile synchronization
-- `[✓]` Activity-related requests
-- `[✓]` Achievement-related requests
-- `[✓]` Lineup-related requests
-- `[✓]` Preview-related requests
-- `[✓]` Some shop-related requests
-- `[ ]` Full combat flow
-- `[ ]` Mission / quest progression
-- `[ ]` Gacha / recruitment systems
-- `[ ]` Complete shop behavior
-- `[ ]` Multiplayer systems
-- `[ ]` Base / dorm systems
-- `[ ]` Full client API coverage
+* [x] Login and basic account entry
+* [x] Player data loading
+* [x] Inventory loading
+* [x] Character loading
+* [x] Skin loading
+* [x] Weapon loading
+* [x] Lobby display character switching
+* [x] Character skin switching
+* [x] Character skin form switching
+* [x] Weapon replacement
+* [x] Weapon upgrade
+* [x] Player rename
+* [x] Basic saving of currently supported lobby state
+* [✓] Main chapter stage entry and related flow
+* [✓] Daily stage entry and related flow
+* [✓] Basic player setting synchronization
+* [✓] Basic profile synchronization
+* [✓] Activity-related requests
+* [✓] Achievement-related requests
+* [✓] Lineup-related requests
+* [✓] Preview-related requests
+* [✓] Some shop-related requests
+* [ ] Full combat flow
+* [ ] Mission / quest progression
+* [ ] Gacha / recruitment systems
+* [ ] Complete shop behavior
+* [ ] Multiplayer systems
+* [ ] Base / dorm systems
+* [ ] Full client API coverage
+
+**Legend:** `[x]` - Implemented, `[✓]` - Partially Implemented, `[ ]` - Not Started
