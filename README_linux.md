@@ -51,7 +51,13 @@ dotnet run --project ./MikuSB
 ## release build
 
 ```bash
-LANG=C time dotnet build -c Release
+DOTNET_CLI_UI_LANGUAGE=en time dotnet publish ./MikuSB/MikuSB.csproj -c Release -r linux-x64 --self-contained true -p:PublishSingleFile=true --property:PublishDir=../publish
+
+# output will in ./publish/*
+cd ./publish
+
+# start server
+./MikuSB
 ```
 
 ## TODO:
