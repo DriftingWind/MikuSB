@@ -198,7 +198,7 @@ public sealed class ProxyServer(
     {
         var pathAndQuery = request.GetPathAndQuery();
         var uri = new Uri($"http://{ServerHost}:{_options.ServerHttpPort}{pathAndQuery}");
-        logger.Info($"Redirect: {request.Method} {request.HostOverride ?? request.Host}{pathAndQuery} -> {uri}");
+        if (ConfigManager.Config.HttpServer.EnableLog) logger.Info($"Redirect: {request.Method} {request.HostOverride ?? request.Host}{pathAndQuery} -> {uri}");
         await SendHttpRequestAsync(clientStream, request, uri, true, cancellationToken);
     }
 
