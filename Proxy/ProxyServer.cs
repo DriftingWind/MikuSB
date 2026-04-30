@@ -74,12 +74,20 @@ public sealed class ProxyServer(
         catch (OperationCanceledException) when (stoppingToken.IsCancellationRequested)
         {
         }
+        catch (SocketException) when (stoppingToken.IsCancellationRequested)
+        {
+        }
+        catch (ObjectDisposedException) when (stoppingToken.IsCancellationRequested)
+        {
+        }
     }
 
-    public override Task StopAsync(CancellationToken cancellationToken)
+    public override async Task StopAsync(CancellationToken cancellationToken)
     {
+        // Cancel the BackgroundService token first so shutdown exceptions are treated as expected.
+        var stopTask = base.StopAsync(cancellationToken);
         _listener?.Stop();
-        return base.StopAsync(cancellationToken);
+        await stopTask;
     }
 
     private async Task HandleClientAsync(TcpClient client, CancellationToken cancellationToken)
