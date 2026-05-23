@@ -53,6 +53,7 @@ public static class GameData
     public static Dictionary<uint, VirCaptureTimeExcel> VirCaptureTimeData { get; private set; } = [];
     public static Dictionary<uint, VirCaptureSeasonExcel> VirCaptureSeasonData { get; private set; } = [];
     public static Dictionary<uint, VirCaptureTrialTimeExcel> VirCaptureTrialTimeData { get; private set; } = [];
+    public static Dictionary<uint, VirCaptureCaptureRegionExcel> VirCaptureCaptureRegionData { get; private set; } = [];
 }
 
 public static class GameResourceTemplateId

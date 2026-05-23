@@ -2,18 +2,18 @@ using Newtonsoft.Json;
 
 namespace MikuSB.Data.Excel;
 
-[ResourceEntity("dlc/vircapture/timelist.json")]
-public class VirCaptureTimeExcel : ExcelResource
+[ResourceEntity("dlc/vircapture/captureregion.json")]
+public class VirCaptureCaptureRegionExcel : ExcelResource
 {
     [JsonProperty("Id")] public uint Id { get; set; }
     [JsonProperty("StartTime")] public string StartTime { get; set; } = "";
     [JsonProperty("EndTime")] public string EndTime { get; set; } = "";
-    [JsonProperty("CaptureRegionId")] public List<uint> CaptureRegionId { get; set; } = [];
+    [JsonProperty("MapId")] public uint MapId { get; set; }
 
     public override uint GetId() => Id;
 
     public override void Loaded()
     {
-        GameData.VirCaptureTimeData[Id] = this;
+        GameData.VirCaptureCaptureRegionData[Id] = this;
     }
 }
